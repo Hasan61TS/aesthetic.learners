@@ -1,0 +1,607 @@
+/* Layout */
+.lesson-content {
+    display: flex;
+    padding-top: 80px;
+    min-height: calc(100vh - 80px);
+    gap: 2rem;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 280px;
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 15px;
+    margin: 1rem;
+    position: sticky;
+    top: 100px;
+    height: fit-content;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.lesson-nav {
+    list-style: none;
+    padding: 0;
+}
+
+.lesson-nav li {
+    margin: 1rem 0;
+}
+
+.lesson-nav a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    display: block;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.lesson-nav li.active a,
+.lesson-nav a:hover {
+    background: var(--accent-gradient);
+    color: white;
+}
+
+/* Main Content */
+.lesson-main {
+    flex: 1;
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Concept Boxes */
+.concept-box {
+    background: var(--card-bg);
+    border-radius: 15px;
+    padding: 2rem;
+    margin: 2rem 0;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.analogy-card {
+    background: rgba(79, 172, 254, 0.1);
+    border-left: 4px solid var(--accent-color);
+    padding: 1.5rem;
+    margin-top: 1rem;
+    border-radius: 0 10px 10px 0;
+}
+
+/* Feature List */
+.feature-list {
+    list-style: none;
+    padding: 0;
+}
+
+.feature-list li {
+    padding: 0.5rem 0;
+    padding-left: 2rem;
+    position: relative;
+}
+
+.feature-list li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+}
+
+/* Terminal Simulator */
+.terminal-simulator {
+    background: #1a1a1a;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 2rem 0;
+}
+
+.terminal-header {
+    background: #333;
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.terminal-title {
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+.terminal-body {
+    padding: 1rem;
+    min-height: 200px;
+    max-height: 400px;
+    overflow-y: auto;
+    font-family: 'Fira Code', monospace;
+}
+
+.command-input {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.prompt {
+    color: #00ff00;
+    margin-right: 0.5rem;
+}
+
+#cli-input {
+    background: transparent;
+    border: none;
+    color: #fff;
+    flex: 1;
+    font-family: monospace;
+    font-size: 1rem;
+    outline: none;
+}
+
+.terminal-help {
+    text-align: center;
+    margin-top: 1rem;
+    color: var(--text-secondary);
+}
+
+code {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    font-family: monospace;
+}
+
+/* Navigation Buttons */
+.navigation-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+}
+
+.nav-button {
+    padding: 0.8rem 1.5rem;
+    background: var(--card-bg);
+    color: var(--text-primary);
+    text-decoration: none;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.nav-button:hover {
+    background: var(--accent-gradient);
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .lesson-content {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: auto;
+        position: static;
+        margin: 1rem;
+    }
+
+    .lesson-main {
+        padding: 1rem;
+    }
+}
+
+/* New styles for Phase 1 index page */
+.phase-content {
+    padding: 100px 2rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.phase-description {
+    color: var(--text-secondary);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.progress-tracker {
+    max-width: 600px;
+    margin: 2rem auto;
+    text-align: center;
+}
+
+.progress-bar {
+    height: 8px;
+    background: var(--card-bg);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+}
+
+.progress {
+    height: 100%;
+    background: var(--accent-gradient);
+    transition: width 0.3s ease;
+}
+
+.progress-text {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.lessons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.lesson-card {
+    background: var(--card-bg);
+    border-radius: 15px;
+    padding: 2rem;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.lesson-card:hover:not(.locked) {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.lesson-status {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.3rem 0.8rem;
+    background: var(--accent-gradient);
+    border-radius: 15px;
+    font-size: 0.8rem;
+    color: white;
+}
+
+.lesson-meta {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.lesson-button {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background: transparent;
+    color: var(--accent-color);
+    text-decoration: none;
+    border-radius: 25px;
+    border: 2px solid var(--accent-color);
+    transition: all 0.3s ease;
+    text-align: center;
+    width: 100%;
+}
+
+.lesson-button:hover:not(.locked .lesson-button) {
+    background: var(--accent-gradient);
+    color: white;
+    border-color: transparent;
+}
+
+.locked {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.locked .lesson-button {
+    background: var(--card-bg);
+    border-color: var(--text-secondary);
+    color: var(--text-secondary);
+    cursor: not-allowed;
+}
+
+/* Quiz Styles */
+.quiz-container {
+    background: var(--card-bg);
+    border-radius: 15px;
+    padding: 2rem;
+    margin: 2rem 0;
+}
+
+.quiz-question {
+    margin-bottom: 1.5rem;
+}
+
+.quiz-options {
+    display: grid;
+    gap: 1rem;
+}
+
+.quiz-option {
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.quiz-option:hover {
+    background: rgba(79, 172, 254, 0.1);
+}
+
+.quiz-option.selected {
+    background: var(--accent-gradient);
+    color: white;
+}
+
+.quiz-feedback {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.quiz-feedback.correct {
+    background: rgba(0, 255, 0, 0.1);
+    border: 1px solid rgba(0, 255, 0, 0.2);
+}
+
+.quiz-feedback.incorrect {
+    background: rgba(255, 0, 0, 0.1);
+    border: 1px solid rgba(255, 0, 0, 0.2);
+}
+
+/* Add these new styles for the hub page */
+
+.hub-content {
+    padding: 100px 2rem 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.hub-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.hub-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(to right, #fff, #b8bfd0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hub-grid {
+    display: grid;
+    gap: 3rem;
+}
+
+.hub-section {
+    background: var(--card-bg);
+    border-radius: 20px;
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.hub-section h2 {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--accent-color);
+}
+
+.content-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.content-card {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 15px;
+    padding: 1.5rem;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.content-card:hover:not(.locked) {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.card-status {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.3rem 0.8rem;
+    background: var(--accent-gradient);
+    border-radius: 15px;
+    font-size: 0.8rem;
+    color: white;
+}
+
+.card-meta {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.card-button {
+    display: inline-block;
+    width: 100%;
+    padding: 0.8rem 1.5rem;
+    background: transparent;
+    color: var(--accent-color);
+    text-decoration: none;
+    border-radius: 25px;
+    border: 2px solid var(--accent-color);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.card-button:hover:not(.locked .card-button) {
+    background: var(--accent-gradient);
+    color: white;
+    border-color: transparent;
+}
+
+.locked {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.locked .card-button {
+    background: var(--card-bg);
+    border-color: var(--text-secondary);
+    color: var(--text-secondary);
+    cursor: not-allowed;
+}
+
+.quiz-card {
+    border-left: 4px solid var(--accent-color);
+}
+
+.resource-card {
+    background: linear-gradient(145deg, rgba(79, 172, 254, 0.1), transparent);
+}
+
+.hub-navigation {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .hub-content {
+        padding: 80px 1rem 1rem;
+    }
+
+    .hub-header h1 {
+        font-size: 2rem;
+    }
+
+    .content-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .hub-section {
+        padding: 1.5rem;
+    }
+}
+
+/* Add these new styles */
+
+.command-table {
+    margin: 1.5rem 0;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.command-row {
+    display: flex;
+    padding: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.command-row:last-child {
+    border-bottom: none;
+}
+
+.command-row:hover {
+    background: rgba(79, 172, 254, 0.1);
+}
+
+.command-row code {
+    flex: 0 0 100px;
+    font-family: 'Fira Code', monospace;
+    color: var(--accent-color);
+    padding: 0.2rem 0.5rem;
+    background: rgba(79, 172, 254, 0.1);
+    border-radius: 4px;
+    margin-right: 1rem;
+}
+
+.command-row span {
+    color: var(--text-secondary);
+}
+
+.practice-exercise {
+    background: rgba(79, 172, 254, 0.05);
+    border-left: 4px solid var(--accent-color);
+    padding: 1.5rem;
+    margin: 2rem 0;
+    border-radius: 0 10px 10px 0;
+}
+
+.practice-exercise h3 {
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+.practice-exercise ol {
+    margin-left: 1.5rem;
+    color: var(--text-secondary);
+}
+
+.practice-exercise li {
+    margin: 0.5rem 0;
+}
+
+.terminal-simulator {
+    margin: 2rem 0;
+    background: #1a1a1a;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Add these styles for the filesystem diagram */
+.filesystem-diagram {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    overflow-x: auto;
+}
+
+.filesystem-diagram pre {
+    font-family: 'Fira Code', monospace;
+    color: var(--text-primary);
+    line-height: 1.4;
+    margin: 0;
+}
+
+.filesystem-diagram pre span {
+    color: var(--accent-color);
+}
+
+/* Update terminal styles for better visibility */
+.terminal-body {
+    padding: 1rem;
+    min-height: 200px;
+    max-height: 400px;
+    overflow-y: auto;
+    font-family: 'Fira Code', monospace;
+}
+
+.command-history {
+    margin-bottom: 1rem;
+}
+
+.command-history div {
+    margin: 0.5rem 0;
+    white-space: pre-wrap;
+    word-break: break-all;
+}
+
+.command-output {
+    color: #4facfe;
+    padding-left: 1rem;
+}
+
+.prompt {
+    color: #00ff00;
+    margin-right: 0.5rem;
+} 

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Package Management - HackEdu</title>
+    <link rel="stylesheet" href="../../../css/styles.css">
+    <link rel="stylesheet" href="../../../css/phase1.css">
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <div class="logo">
+                <h1>HackEdu</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../../../index.html">Home</a></li>
+                <li><a href="../../phases.html">Learning Phases</a></li>
+                <li><a href="../../about.html">About</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="lesson-content">
+        <div class="sidebar">
+            <h3>Lesson Contents</h3>
+            <ul class="lesson-nav">
+                <li class="active"><a href="#package-intro">Package Management</a></li>
+                <li><a href="#quiz1">Quick Check 1</a></li>
+                <li><a href="#apt-commands">APT Commands</a></li>
+                <li><a href="#quiz2">Quick Check 2</a></li>
+                <li><a href="#repositories">Software Repositories</a></li>
+                <li><a href="#quiz3">Quick Check 3</a></li>
+                <li><a href="#lesson-test">Lesson Test</a></li>
+            </ul>
+            <div class="lesson-progress">
+                <div class="progress-bar">
+                    <div class="progress" style="width: 0%"></div>
+                </div>
+                <span class="progress-text">0% Complete</span>
+            </div>
+        </div>
+
+        <section class="lesson-main">
+            <div id="package-intro" class="content-section">
+                <h1>Package Management</h1>
+                
+                <div class="concept-box">
+                    <h2>Understanding Package Management</h2>
+                    <p>Package management is how Linux systems install, update, and remove software. The most common package manager in Debian-based systems (like Ubuntu and Kali) is APT (Advanced Package Tool).</p>
+                    
+                    <div class="analogy-card">
+                        <h3>💡 Simple Analogy</h3>
+                        <p>Think of a package manager like an app store for your computer. Just like how you install apps on your phone through the app store, you install software on Linux through the package manager.</p>
+                    </div>
+                </div>
+
+                <div id="quiz1" class="quiz-container">
+                    <h2>Quick Check 1</h2>
+                    <div class="quiz-question" data-question="1">
+                        <h3>What does APT stand for?</h3>
+                        <div class="quiz-options">
+                            <div class="quiz-option">Application Package Tool</div>
+                            <div class="quiz-option" data-correct="true">Advanced Package Tool</div>
+                            <div class="quiz-option">Automated Program Transfer</div>
+                        </div>
+                        <div class="quiz-feedback"></div>
+                    </div>
+                </div>
+
+                <div id="apt-commands" class="concept-box">
+                    <h2>Essential APT Commands</h2>
+                    <p>Here are the most important APT commands you'll use:</p>
+                    
+                    <div class="command-table">
+                        <div class="command-row">
+                            <code>apt update</code>
+                            <span>Update package list</span>
+                        </div>
+                        <div class="command-row">
+                            <code>apt install</code>
+                            <span>Install new package</span>
+                        </div>
+                        <div class="command-row">
+                            <code>apt remove</code>
+                            <span>Remove package</span>
+                        </div>
+                        <div class="command-row">
+                            <code>apt upgrade</code>
+                            <span>Upgrade all packages</span>
+                        </div>
+                        <div class="command-row">
+                            <code>apt search</code>
+                            <span>Search for packages</span>
+                        </div>
+                    </div>
+
+                    <div class="terminal-simulator">
+                        <div class="terminal-header">
+                            <span class="terminal-title">Try Package Management</span>
+                        </div>
+                        <div class="terminal-body">
+                            <div class="command-history"></div>
+                            <div class="command-input">
+                                <span class="prompt">user@linux:~$</span>
+                                <input type="text" id="cli-input" placeholder="Try 'apt search nmap'">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="quiz2" class="quiz-container">
+                    <h2>Quick Check 2</h2>
+                    <div class="quiz-question" data-question="2">
+                        <h3>Which command updates the package list?</h3>
+                        <div class="quiz-options">
+                            <div class="quiz-option">apt install</div>
+                            <div class="quiz-option" data-correct="true">apt update</div>
+                            <div class="quiz-option">apt upgrade</div>
+                        </div>
+                        <div class="quiz-feedback"></div>
+                    </div>
+                </div>
+
+                <div id="repositories" class="concept-box">
+                    <h2>Software Repositories</h2>
+                    <p>Repositories are servers that hold collections of packages. Linux systems know which repositories to use through the sources list.</p>
+                    
+                    <div class="command-table">
+                        <div class="command-row">
+                            <code>sources.list</code>
+                            <span>Repository configuration file</span>
+                        </div>
+                        <div class="command-row">
+                            <code>add-apt-repository</code>
+                            <span>Add new repository</span>
+                        </div>
+                    </div>
+
+                    <div class="practice-exercise">
+                        <h3>Practice Exercise</h3>
+                        <p>Try these package management tasks:</p>
+                        <ol>
+                            <li>Update package list</li>
+                            <li>Search for a package</li>
+                            <li>Try installing a package</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div id="quiz3" class="quiz-container">
+                    <h2>Quick Check 3</h2>
+                    <div class="quiz-question" data-question="3">
+                        <h3>What's the correct order for installing new software?</h3>
+                        <div class="quiz-options">
+                            <div class="quiz-option">install then update</div>
+                            <div class="quiz-option" data-correct="true">update then install</div>
+                            <div class="quiz-option">upgrade then install</div>
+                        </div>
+                        <div class="quiz-feedback"></div>
+                    </div>
+                </div>
+
+                <div id="lesson-test" class="quiz-container">
+                    <h2>Lesson Test</h2>
+                    <p>Complete this test to unlock the next lesson</p>
+                    
+                    <div class="quiz-question" data-question="4">
+                        <h3>Which command completely removes a package and its configuration?</h3>
+                        <div class="quiz-options">
+                            <div class="quiz-option">apt remove</div>
+                            <div class="quiz-option" data-correct="true">apt purge</div>
+                            <div class="quiz-option">apt delete</div>
+                        </div>
+                        <div class="quiz-feedback"></div>
+                    </div>
+
+                    <div class="quiz-question" data-question="5">
+                        <h3>What's the purpose of 'apt upgrade'?</h3>
+                        <div class="quiz-options">
+                            <div class="quiz-option">Install new packages</div>
+                            <div class="quiz-option">Update package list</div>
+                            <div class="quiz-option" data-correct="true">Install available updates</div>
+                        </div>
+                        <div class="quiz-feedback"></div>
+                    </div>
+                </div>
+
+                <div class="navigation-buttons">
+                    <a href="permissions.html" class="nav-button prev">← Previous Lesson</a>
+                    <a href="editors.html" class="nav-button next disabled" data-next="editors.html">Next: Text Editors & Files →</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 HackEdu. All rights reserved.</p>
+    </footer>
+
+    <script src="../../../js/main.js"></script>
+    <script src="../../../js/quiz.js"></script>
+    <script src="../../../js/phase1.js"></script>
+</body>
+</html> 

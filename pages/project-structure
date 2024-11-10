@@ -1,0 +1,13 @@
+hackingcourse/
+├── assets/
+│   └── fonts/
+├── css/
+│   └── styles.css
+├── images/
+│   └── favicon/
+├── js/
+│   └── main.js
+└── pages/
+    ├── phases.html
+    └── about.html
+└── index.html 

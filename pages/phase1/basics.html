@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linux Basics - HackEdu</title>
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../css/phase1.css">
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <div class="logo">
+                <h1>HackEdu</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../phases.html">Learning Phases</a></li>
+                <li><a href="../about.html">About</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="lesson-content">
+        <div class="sidebar">
+            <h3>Phase 1 Contents</h3>
+            <ul class="lesson-nav">
+                <li class="active"><a href="basics.html">Introduction to Linux</a></li>
+                <li><a href="lessons/cli.html">Command Line Basics</a></li>
+                <li><a href="lessons/filesystem.html">File System Navigation</a></li>
+                <li><a href="lessons/permissions.html">File Permissions</a></li>
+            </ul>
+        </div>
+
+        <section class="lesson-main">
+            <h1>Introduction to Linux</h1>
+            
+            <div class="concept-box">
+                <h2>What is Linux?</h2>
+                <p>Linux is an open-source operating system kernel that forms the foundation of many different operating systems (distributions).</p>
+                <div class="analogy-card">
+                    <h3>💡 Simple Analogy</h3>
+                    <p>Think of Linux as the engine of a car. Just like how different car manufacturers can use the same type of engine to build different cars, different organizations can use Linux to build different operating systems.</p>
+                </div>
+            </div>
+
+            <div class="concept-box">
+                <h2>Why Linux for Hacking?</h2>
+                <ul class="feature-list">
+                    <li>Complete control over the system</li>
+                    <li>Powerful command-line interface</li>
+                    <li>Built-in networking tools</li>
+                    <li>Strong security features</li>
+                </ul>
+            </div>
+
+            <div class="interactive-demo">
+                <h2>Try Your First Command</h2>
+                <div class="terminal-simulator">
+                    <div class="terminal-header">
+                        <span class="terminal-title">Terminal</span>
+                    </div>
+                    <div class="terminal-body">
+                        <div class="command-history"></div>
+                        <div class="command-input">
+                            <span class="prompt">user@linux:~$</span>
+                            <input type="text" id="cli-input" placeholder="Type 'whoami' here...">
+                        </div>
+                    </div>
+                </div>
+                <div class="terminal-help">
+                    <p>Try typing <code>whoami</code> in the terminal above!</p>
+                </div>
+            </div>
+
+            <div class="navigation-buttons">
+                <a href="../phases.html" class="nav-button prev">← Back to Phases</a>
+                <a href="lessons/cli.html" class="nav-button next">Next: Command Line Basics →</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 HackEdu. All rights reserved.</p>
+    </footer>
+
+    <script src="../../js/main.js"></script>
+    <script src="../../js/phase1.js"></script>
+</body>
+</html> 

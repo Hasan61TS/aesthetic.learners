@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to Linux - HackEdu</title>
+    <link rel="stylesheet" href="../../../css/styles.css">
+    <link rel="stylesheet" href="../../../css/phase1.css">
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <div class="logo">
+                <h1>HackEdu</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../../../index.html">Home</a></li>
+                <li><a href="../../phases.html">Learning Phases</a></li>
+                <li><a href="../../about.html">About</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="lesson-content">
+        <div class="sidebar">
+            <h3>Lesson Contents</h3>
+            <ul class="lesson-nav">
+                <li class="active"><a href="#intro">What is Linux?</a></li>
+                <li><a href="#quiz1">Quick Check 1</a></li>
+                <li><a href="#distributions">Linux Distributions</a></li>
+                <li><a href="#quiz2">Quick Check 2</a></li>
+                <li><a href="#terminal">Terminal Basics</a></li>
+                <li><a href="#lesson-test">Lesson Test</a></li>
+            </ul>
+            <div class="lesson-progress">
+                <div class="progress-bar">
+                    <div class="progress" style="width: 0%"></div>
+                </div>
+                <span class="progress-text">0% Complete</span>
+            </div>
+        </div>
+
+        <section class="lesson-main">
+            <div id="intro" class="content-section">
+                <h1>Introduction to Linux</h1>
+                
+                <div class="concept-box">
+                    <h2>What is Linux?</h2>
+                    <p>Linux is an open-source operating system kernel that forms the foundation of many different operating systems (distributions).</p>
+                    <div class="analogy-card">
+                        <h3>💡 Simple Analogy</h3>
+                        <p>Think of Linux as the engine of a car. Just like how different car manufacturers can use the same type of engine to build different cars, different organizations can use Linux to build different operating systems.</p>
+                    </div>
+                </div>
+
+                <div id="quiz1" class="quiz-container">
+                    <h2>Quick Check 1</h2>
+                    <div class="quiz-question" data-question="1">
+                        <h3>What is Linux primarily?</h3>
+                        <div class="quiz-options">
+                            <div class="quiz-option" data-correct="true">An open-source operating system kernel</div>
+                            <div class="quiz-option">A complete operating system</div>
+                            <div class="quiz-option">A type of computer</div>
+                        </div>
+                        <div class="quiz-feedback"></div>
+                    </div>
+                </div>
+
+                <div id="distributions" class="concept-box">
+                    <h2>Linux Distributions</h2>
+                    <p>Linux distributions (or "distros") are complete operating systems built around the Linux kernel. Popular distributions include:</p>
+                    <ul class="feature-list">
+                        <li>Ubuntu - User-friendly and popular for beginners</li>
+                        <li>Kali Linux - Specialized for security testing and hacking</li>
+                        <li>Fedora - Advanced features and cutting-edge technology</li>
+                        <li>Debian - Known for stability and security</li>
+                    </ul>
+                    <div class="analogy-card">
+                        <h3>💡 Simple Analogy</h3>
+                        <p>If Linux is an engine, distributions are complete cars. Each car (distro) uses the same basic engine (Linux kernel) but adds different features and designs to serve different purposes.</p>
+                    </div>
+                </div>
+
+                <div id="quiz2" class="quiz-container">
+                    <h2>Quick Check 2</h2>
+                    <div class="quiz-question" data-question="2">
+                        <h3>Which Linux distribution is specifically designed for security testing?</h3>
+                        <div class="quiz-options">
+                            <div class="quiz-option">Ubuntu</div>
+                            <div class="quiz-option" data-correct="true">Kali Linux</div>
+                            <div class="quiz-option">Fedora</div>
+                        </div>
+                        <div class="quiz-feedback"></div>
+                    </div>
+                </div>
+
+                <div id="terminal" class="concept-box">
+                    <h2>The Terminal: Your Primary Tool</h2>
+                    <p>The terminal (or command line interface) is your main way of interacting with Linux. Let's try some basic commands:</p>
+                    
+                    <div class="terminal-simulator">
+                        <div class="terminal-header">
+                            <span class="terminal-title">Terminal</span>
+                        </div>
+                        <div class="terminal-body">
+                            <div class="command-history"></div>
+                            <div class="command-input">
+                                <span class="prompt">user@linux:~$</span>
+                                <input type="text" id="cli-input" placeholder="Type 'whoami' here...">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="terminal-help">
+                        <p>Try these commands:</p>
+                        <code>whoami</code> - Shows your username
+                        <code>pwd</code> - Shows current directory
+                        <code>ls</code> - Lists files and folders
+                    </div>
+                </div>
+
+                <div id="lesson-test" class="quiz-container">
+                    <h2>Lesson Test</h2>
+                    <p>Complete this test to unlock the next lesson</p>
+                    
+                    <div class="quiz-question" data-question="3">
+                        <h3>What makes Linux different from proprietary operating systems?</h3>
+                        <div class="quiz-options">
+                            <div class="quiz-option">It's faster</div>
+                            <div class="quiz-option">It's more expensive</div>
+                            <div class="quiz-option" data-correct="true">It's open-source</div>
+                        </div>
+                        <div class="quiz-feedback"></div>
+                    </div>
+
+                    <div class="quiz-question" data-question="4">
+                        <h3>What is a Linux distribution?</h3>
+                        <div class="quiz-options">
+                            <div class="quiz-option">Just the Linux kernel</div>
+                            <div class="quiz-option" data-correct="true">A complete OS built around the Linux kernel</div>
+                            <div class="quiz-option">A type of computer program</div>
+                        </div>
+                        <div class="quiz-feedback"></div>
+                    </div>
+
+                    <div class="quiz-question" data-question="5">
+                        <h3>Which interface will you primarily use for hacking in Linux?</h3>
+                        <div class="quiz-options">
+                            <div class="quiz-option" data-correct="true">Terminal/Command Line Interface</div>
+                            <div class="quiz-option">Graphical User Interface</div>
+                            <div class="quiz-option">Web Browser</div>
+                        </div>
+                        <div class="quiz-feedback"></div>
+                    </div>
+                </div>
+
+                <div class="navigation-buttons">
+                    <a href="../hub.html" class="nav-button prev">← Back to Hub</a>
+                    <a href="cli.html" class="nav-button next disabled" data-next="cli.html">Next Lesson: Command Line Basics →</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 HackEdu. All rights reserved.</p>
+    </footer>
+
+    <script src="../../../js/main.js"></script>
+    <script src="../../../js/quiz.js"></script>
+    <script src="../../../js/phase1.js"></script>
+</body>
+</html> 
